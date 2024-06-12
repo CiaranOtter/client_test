@@ -1,4 +1,4 @@
-FROM gcc:latest
+FROM ubuntu:latest
 COPY client.o client.o
-RUN ./client.o
-# RUN ./client.o
+RUN ["chmod", "+x", "client.o"]
+ENTRYPOINT [ "./client.o"]
